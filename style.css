@@ -14,6 +14,10 @@
 	margin: 0 auto;
 }
 
+.centragedimage{
+	margin: 0 auto;
+	text-align: center;
+}
 .cookie {
 	margin: 0 auto !important;
 	height: 50%;
