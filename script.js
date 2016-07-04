@@ -13,6 +13,9 @@ function clicker() {
 function clicker() {
     score = score + multi
     document.getElementById("score").innerHTML = "Points " + score;
+     if (score ==10){
+        setInterval(clicker,1000);
+    }
 } 
 
 
@@ -29,10 +32,9 @@ function incrementer() {
     }
 
     else {
-        alert("Va t'acheter de l'argent !");
+        alert("Va t'acheter des cookies !");
     }
 }
-
 
 
 
