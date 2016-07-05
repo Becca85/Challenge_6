@@ -1,31 +1,93 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
   <meta charset="utf-8">
-  <title>test challenge 6</title>
+  <title>Exercice 3</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-<section class="h">
-
-		
-		<!--div score-->
-		<div class="score col-md-12" id="score">
-        Point 0</div>
-
+<section>
+<!--1ère div-->
+	<div class="col-md-12 h ">
         <!--image du cookie-->
-        <div class="centragedimage"><img src="images/monsieurcookie.png" id="cookie" class= "cookie"alt="cookie" onclick="clicker()"/>     </div>           
-    	
+		<div class="clickcookie">
+        	<img src="images/cookie.png" onclick="clicker()" />                
+    	</div>
 
-		<!--bouton multiplicateur-->
-    <div class="col-md-12">
-		<button classe = "center-block" id="multiplicateur"  onclick="incrementer()"> Multiplicateur x 1
-		</button>
-		<p id="prix">Prix 5</p>
-    </div>
-</section>
 
-</body>      
+    	<div class="clickcookie">
+    		
+        	<button class="btn btn-default" id="bouton"> <p>Score:</p>
+        		<div id="affichage"> 0 </div>
+        	<p>Cookies</p> 
+        	</button>
+        </div><hr>
+
+		<div class="clickcookie">
+			 <button class="btn btn-default"  onclick="incrementer()"> Multiplicateur x
+		<div id="multiplicateur" > 1 </div> </button>
+		<p> Prix: <i id="cout">50</i></p>
+		</div><hr>
+
+		<div class="clickcookie">
+			<button class="btn btn-default" onclick="autoclick()">Click Automatique</button>
+			<p>Prix : <i id="cout_auto">200</i></p>
+		</div>
+	</div>
+
+
+</body>
+
+ <script type="text/javascript">
+var compteur = 0; 
+var multiplication = 1;
+var prix = 50; 
+var prixAutomatique = 200;
+////////
+
+
+
+
+function clicker() {
+        compteur += multiplication;
+        document.getElementById("affichage").innerHTML=compteur;
+}
+
+// pouvoir multiplier et predre 50 p chaque et le prix augmente 2
+function incrementer() {
+	
+	if (compteur >= prix) {
+		multiplication ++;
+		compteur -= prix;
+		prix *= 2;
+
+		document.getElementById("affichage").innerHTML=compteur;
+		document.getElementById("multiplicateur").innerHTML=multiplication;
+		document.getElementById("cout").innerHTML=prix;
+	}
+	else {
+		alert("Vous n'avez assez de crédit, il faut avoir " + prix + " clicker pour pouvoir multiplicateur !!!!");
+	}
+}
+
+
+
+function autoclick() {
+	
+	if (compteur >= prixAutomatique ) {
+		click = setInterval(clicker, 1000);
+		compteur -= prixAutomatique;
+		prixAutomatique *= 2;
+
+		document.getElementById("affichage").innerHTML=compteur;
+		document.getElementById("cout_auto").innerHTML=prixAutomatique;
+	}
+	else {
+		alert("Vous devez avoir 200 cookies");
+	}
+}
+
+</script>
+
 </html>

@@ -1,42 +1,29 @@
 .h {
-	height: 700px;
+	height: 100vh;
 	padding: 0px !important;
 	background-image: url(images/background.jpeg);
 }
 
-.score{
-	color : white;
-	font-size: 35px;
-	text-align: center;
+/*div 1ère*/
+
+.col-md-12{
+	color: white;
+	
+}
+.col-md-12 p{
+	padding-left: 20px;
+	font-size: 18px;
 }
 
-.score{
-	margin: 0 auto;
+
+.clickcookie{
+	padding-left: 120px;
+}
+img{
+	width: 300px;
+	height: 300px;
+	margin-left: -70px;
+	padding-bottom: 50px;
+	border-radius: 100px;
 }
 
-.centragedimage{
-	margin: 0 auto;
-	text-align: center;
-}
-.cookie {
-	margin: 0 auto !important;
-	height: 50%;
-	width: 30%;
-}
-
-.cookie:active{
-	margin: 0 auto !important;
-	height: 55%;
-	width: 35%;
-}
-
-button {
-	margin-left: 570px !important;
-
-}
-
-p{
-	color : white;
-	font-size: 35px;
-	text-align: center;
-}
